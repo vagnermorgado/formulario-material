@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Material Design</title>
+
+    <!--CSS Material Design -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- ìcones Google -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body class="background-color: black">
+
+    <!-- Add CSS Style -->
+    <style>
+        .dados input {
+            font-size: 16px;
+            color: aliceblue;
+            padding: 2px !important;
+        }
+
+        .titulo {
+            height: 100px;
+            background-color: #29cb7e;
+            text-align: center;
+        }
+
+        #aplicacao:focus {
+            border-bottom: 1px solid #29cb7e;
+        }
+
+        #botao {
+            background-color: #29cb7e;
+        }
+
+        #selecao {
+            background-color: black;
+            color: white;
+            width: 20%;
+        }
+
+        #experiencia {
+            color: white;
+            height: 100px;
+        }
+
+        input:not([type]):focus:not([readonly]),
+        input[type=text]:not(.browser-default):focus:not([readonly]),
+        input[type=password]:not(.browser-default):focus:not([readonly]),
+        input[type=email]:not(.browser-default):focus:not([readonly]),
+        input[type=url]:not(.browser-default):focus:not([readonly]),
+        input[type=time]:not(.browser-default):focus:not([readonly]),
+        input[type=date]:not(.browser-default):focus:not([readonly]),
+        input[type=datetime]:not(.browser-default):focus:not([readonly]),
+        input[type=datetime-local]:not(.browser-default):focus:not([readonly]),
+        input[type=tel]:not(.browser-default):focus:not([readonly]),
+        input[type=number]:not(.browser-default):focus:not([readonly]),
+        input[type=search]:not(.browser-default):focus:not([readonly]),
+        textarea.materialize-textarea:focus:not([readonly]) {
+            border-bottom: 1px solid #29cb7e !important;
+        }
+
+        [type="radio"]:checked+span:after,
+        [type="radio"].with-gap:checked+span:after {
+            background-color: #29cb7e !important;
+            border: #29cb7e !important;
+        }
+
+        [type="checkbox"]:checked+span:not(.lever):before {
+            border-bottom: 2px solid #29cb7e !important;
+            border-right: 2px solid #29cb7e !important;
+        }
+
+        input:-webkit-autofill {
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: white;
+        }
+    </style>
+
+    <fieldset>
+        <div class="container">
+    
+                <div class="titulo">
+                    <span class="white-text text-darken-2">
+                        <h4>Cadastro de DEVs</h4> Complete suas informações:
+                    </span>
+                </div> <br>
+
+                <fieldset>
+                    <div class="white-text text-darken-2">
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <div class="dados">
+                                    <label for="nome"><strong>Nome:</strong></label>
+                                    <input type="text" class="form-control" name="nome" id="nome" required>
+                                </div>
+                            </div>
+
+                            <div class="input-field col s6">
+                                <div class="dados">
+                                    <label for="sobrenome"><strong>Sobrenome:</strong></label>
+                                    <input type="text" class="form-control" name="sobrenome" id="sobrenome" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <div class="dados">
+                                    <label for="email"><strong>E-mail:</strong></label>
+                                    <input type="email" class="form-control" name="email" id="email" required>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+
+                        <form action="#">
+                            <label class="aplicacao"><strong>De que lado da aplicação você desenvolve?</strong></label>
+
+                            <p>
+                                <label>
+                                    <input class="with-gap" name="group1" type="radio" id="aplicacao">
+                                    <span>Front-end</span>
+                                </label>
+                            </p>
+
+                            <p>
+                                <label>
+                                    <input class="with-gap" name="group1" type="radio" />
+                                    <span>Back-end</span>
+                                </label>
+                            </p>
+
+                            <p>
+                                <label>
+                                    <input class="with-gap" name="group1" type="radio" />
+                                    <span>Full-stack</span>
+                                </label>
+                            </p>
+
+                        </form>
+
+                        <label>Senioridade:</label>
+                        <select class="browser-default" id="selecao">
+                            <option value="" disabled selected>Selecione:</option>
+                            <option value="1">Júnior</option>
+                            <option value="2">Pleno</option>
+                            <option value="3">Sênior</option>
+                        </select><br><br>
+
+                        <form>
+
+                            <label><strong>Selecione as tecnologias que usa ou domina:</strong></label>
+
+                            <p>
+                                <label>
+                                    <input type="checkbox" />
+                                    <span>HTML</span>
+                                </label>
+                            </p>
+
+                            <p>
+                                <label>
+                                    <input type="checkbox" />
+                                    <span>CSS</span>
+                                </label>
+                            </p>
+
+                            <p>
+                                <label>
+                                    <input type="checkbox" />
+                                    <span>Javascript</span>
+                                </label>
+                            </p>
+
+                            <p>
+                                <label>
+                                    <input type="checkbox" />
+                                    <span>PHP</span>
+                                </label>
+                            </p>
+
+                            <p>
+                                <label>
+                                    <input type="checkbox" />
+                                    <span>C#</span>
+                                </label>
+                            </p>
+
+                            <p>
+                                <label>
+                                    <input type="checkbox" />
+                                    <span>Python</span>
+                                </label>
+                            </p>
+
+                            <p>
+                                <label>
+                                    <input type="checkbox" />
+                                    <span>Java</span>
+                                </label>
+                            </p>
+
+                </fieldset> <br>
+
+                <div>
+
+                    <label><strong>Conte um pouco da sua experiência:</strong></label>
+
+                    <textarea id="experiencia"></textarea>
+
+                </div>
+
+                <div style="text-align: center;">
+
+                    <button class="btn waves-effect waves-light" type="submit" name="action" id="botao">Concluído
+                        <i class="material-icons right">send</i>
+                    </button>
+
+                </div>
+            </form>
+        </div>
+        
+    </fieldset>
+
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
+</html>
